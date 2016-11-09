@@ -1,0 +1,11 @@
+<h1>Information for <%= @patient.name %></h1>
+<h2> <%= link_to "All Patients", patients_path %> </h2>
+
+<div class="">
+  Age: <%= @patient.age %>,&nbsp;&nbsp;
+  Gender: <%= @patient.gender  %>
+</div>
+
+<%= link_to "Edit #{@patient.name}", edit_patient_path(@patient) %>
+<%= link_to "Remove #{@patient.name}", patient_path(@patient),
+  method: :delete, data: {confirm: "Remove from practice?"}  %>

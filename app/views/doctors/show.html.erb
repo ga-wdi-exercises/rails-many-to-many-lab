@@ -1,0 +1,8 @@
+<h1>Appointments for Dr. <%= @doctor.name %></h1>
+<h2> <%= link_to "All Doctors", doctors_path %> </h2>
+
+
+<h2> Specialty: <%= @doctor.specialty %> </h2>
+<%= link_to "Edit #{@doctor.name}", edit_doctor_path(@doctor)  %>
+<%= link_to "Fire #{@doctor.name}", doctor_path(@doctor),
+  method: :delete, data: {confirm: "Give unemployment?"}  %>
