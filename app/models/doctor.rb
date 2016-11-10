@@ -1,4 +1,5 @@
 class Doctor < ApplicationRecord
-  has_many :apointments
-  has_many :patients, through: :appointment
+  #has_and_belongs_to_many :appointments
+  has_many :appointments
+  has_many :patients, through: :appointments
 end
