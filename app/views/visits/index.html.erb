@@ -1,6 +1,6 @@
 <h1>All Visits <%= link_to "(+)", new_visit_path %></h1>
 <ul>
 <% @visits.order(:time).reverse_order.each do |visit| %>
-  <li><%= visit.patient.name %> - <%= visit.doctor.name %> - <%= visit.time %></li>
+  <li><%= visit.patient.name %> - <%= visit.doctor.name %> - <%= visit.time %><%= link_to "Details", visit %>  <%= link_to "Delete", visit, method: :delete %>   <%= link_to "Edit", edit_visit_path(visit) %></li>
 <% end %>
 </ul>
