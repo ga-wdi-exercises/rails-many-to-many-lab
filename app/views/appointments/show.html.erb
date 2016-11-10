@@ -1,0 +1,12 @@
+<h1>Appointment</h1>
+<p><%= @appointment.patient.name %> with Dr. <%= @appointment.doctor.name %></p>
+<p><%= @appointment.date %></p>
+<p><%= @appointment.time %></p>
+
+<h2> <%= link_to "All Doctors", doctors_path %> </h2>
+<h2> <%= link_to "All Patients", patients_path %> </h2>
+
+
+<%= link_to "Edit This Appointment", edit_appointment_path(@appointment)  %>
+<%= link_to "Delete This Appointment", appointment_path(@appointment),
+  method: :delete %>

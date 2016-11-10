@@ -1,6 +1,14 @@
 <h1>Information for <%= @patient.name %></h1>
 <h2> <%= link_to "All Patients", patients_path %> </h2>
 
+<h2>Appointments:</h2>
+<% @patient.appointments.each do |appointment| %>
+  <p><%= link_to appointment.name, appointment_path(appointment) %></p>
+  <p>Dr. <%= appointment.doctor.name %></p>
+  <p>Date: <%= appointment.date %></p>
+  <p>Time: <%= appointment.time %></p>
+<%end %>
+
 <div class="">
   Age: <%= @patient.age %>,&nbsp;&nbsp;
   Gender: <%= @patient.gender  %>
