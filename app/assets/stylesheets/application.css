@@ -1,15 +1,61 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+* or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*
+*= require_tree .
+*= require_self
+*/
+
+.header {
+  text-align: center;
+}
+
+.slogan {
+  font-style: italic;
+}
+
+
+.redcross {
+  color: red;
+  font-size: 8em;
+  text-shadow: .03em .03em 0px darkred;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  margin: 40px auto;
+  width: 80%;
+  border: 10px black double;
+  padding: 20px;
+}
+
+main {
+  width: 60%;
+  margin: auto;
+  padding: 1em;
+  border: 2px gray solid;
+}
+
+a:hover {
+  color: yellow;
+}
+
+a, h1, h2 {
+  color: red;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgba(0, 0, 0, 0.2);
+}
+
+a {
+  font-size: 20px;
+}
