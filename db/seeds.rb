@@ -13,22 +13,25 @@ Doctor.destroy_all
 Patient.destroy_all
 
 
+dr_manny = Doctor.create!(name:"Manuel Manny", specialty:"Many, many things")
+dr_nick = Doctor.create!(name:"Nick", specialty:"Whatcha got?")
+dr_house = Doctor.create!(name:"Gregory House", specialty:"Nephrology")
+dr_grey = Doctor.create!(name:"Meredith Grey", specialty:"General Surgery")
 
-dr_manny = Doctor.create(name:"Manuel Manny", specialty:"Many, many things")
-dr_nick = Doctor.create(name:"Nick", specialty:"Whatcha got?")
-dr_house = Doctor.create(name:"Gregory House", specialty:"Nephrology")
-dr_gray = Doctor.create(name:"Meredith Grey", specialty:"General Surgery")
-
-m_burns = Patient.create(name: "Montgomery Burns", age: 123, gender: "male")
-grace_hopper = Patient.create(name: "Grace Hopper", age: 109, gender:"female")
-mr_bombastic = Patient.create(name: "M. Bombastic", age: 64, gender: "simply_fantastic")
-elephant_man = Patient.create(name: "Joseph Merrick", age: 27, gender:"male")
-storm = Patient.create(name:"Storm", age: 32, gender:"female")
-zoe = Patient.create(name: "Zoe Barnes", age: 27, gender:"female")
-sansa = Patient.create(name: "Sansa Stark", age: 22, gender: "female")
-sea_biscuit = Patient.create(name: "C. Biscuit", age: 52, gender: "not_horse")
-molly_millions  = Patient.create(name: "Molly 'Street Samurai' Millions", age: 27, gender:"female")
-squanchy = Patient.create(name: "Squanchy", age: -12, gender:"squanchy_male")
-ada_lovelace = Patient.create(name: "Ada Lovelace", age: 200, gender:"female")
+m_burns = Patient.create!(name: "Montgomery Burns", age: 123, gender: "male")
+grace_hopper = Patient.create!(name: "Grace Hopper", age: 109, gender:"female")
+mr_bombastic = Patient.create!(name: "M. Bombastic", age: 64, gender: "simply_fantastic")
+elephant_man = Patient.create!(name: "Joseph Merrick", age: 27, gender:"male")
+storm = Patient.create!(name:"Storm", age: 32, gender:"female")
+zoe = Patient.create!(name: "Zoe Barnes", age: 27, gender:"female")
+sansa = Patient.create!(name: "Sansa Stark", age: 22, gender: "female")
+sea_biscuit = Patient.create!(name: "C. Biscuit", age: 52, gender: "not_horse")
+molly_millions  = Patient.create!(name: "Molly 'Street Samurai' Millions", age: 27, gender:"female")
+squanchy = Patient.create!(name: "Squanchy", age: -12, gender:"squanchy_male")
+ada_lovelace = Patient.create!(name: "Ada Lovelace", age: 200, gender:"female")
 
 # Add Appointments here
+appointment0 = Appointment.create!(doctor_id: dr_nick.id, patient_id: squanchy.id, appointment_time: Time.new)
+appointment1 = Appointment.create!(doctor_id: dr_manny.id, patient_id: sea_biscuit.id, appointment_time: Time.new)
+appointment2 = Appointment.create!(doctor_id: dr_grey.id, patient_id: molly_millions.id, appointment_time: Time.new)
+appointment3 = Appointment.create!(doctor_id: dr_grey.id, patient_id: grace_hopper.id, appointment_time: Time.new)
