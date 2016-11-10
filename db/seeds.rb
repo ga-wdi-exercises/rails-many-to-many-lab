@@ -11,6 +11,7 @@
 ##############################################
 Doctor.destroy_all
 Patient.destroy_all
+Appointment.destroy_all
 
 
 
@@ -32,3 +33,5 @@ squanchy = Patient.create(name: "Squanchy", age: -12, gender:"squanchy_male")
 ada_lovelace = Patient.create(name: "Ada Lovelace", age: 200, gender:"female")
 
 # Add Appointments here
+
+sansa.appointments.create(doctor: dr_manny, time: "10:30", date: "10/10/16", note: "I'm sick")

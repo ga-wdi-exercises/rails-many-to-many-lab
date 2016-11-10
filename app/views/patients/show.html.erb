@@ -2,10 +2,10 @@
 <h2> <%= link_to "All Patients", patients_path %> </h2>
 
 <div class="">
-  Age: <%= @patient.age %>,&nbsp;&nbsp;
-  Gender: <%= @patient.gender  %>
+  <p>Age: <%= @patient.age %></p>
+  <p>Gender: <%= @patient.gender  %></p>
 </div>
 
 <%= link_to "Edit #{@patient.name}", edit_patient_path(@patient) %>
 <%= link_to "Remove #{@patient.name}", patient_path(@patient),
-  method: :delete, data: {confirm: "Remove from practice?"}  %>
+  method: :delete, data: {confirm: "Remove from practice?"} %>

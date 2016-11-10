@@ -1,0 +1,17 @@
+<h1>Edit <%=@patient%>'s Appointment</h1>
+
+<%= form_for @appointment do |f| %>
+ <%= f.label :date %>
+ <%= f.text_field :date %>
+<br><br>
+ <%= f.label :time %>
+ <%= f.text_field :time %>
+<br><br>
+ <%= f.label :note %>
+ <%= f.text_field :note %>
+<br><br>
+Doctor: <%= select_tag :doctor_id, options_for_select(@doctors, @appointment.doctor.id)%>
+<br><br>
+ <%= f.submit%>
+<% end %>
+</div>
