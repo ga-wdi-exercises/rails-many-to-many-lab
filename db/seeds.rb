@@ -33,7 +33,8 @@ ada_lovelace = Patient.create(name: "Ada Lovelace", age: 200, gender:"female")
 
 # Add Appointments here
 
-dr_house.appointments.create(patient: zoe)
-dr_manny.appointments.create(patient: elephant_man)
-dr_gray.appointments.create(patient: storm)
-dr_nick.appointments.create(patient: sea_biscuit)
+# dr_house.appointments.create(patient: zoe, time:2016-11-03-08-00-00)
+
+20.times do
+ Appointment.create!(doctor: Doctor.all.sample, patient: Patient.all.sample, time: "2016-#{rand(1..12)}-#{rand(1..31)} #{rand(1..23)}:#{rand(1..59)}:#{rand(1..59)}")
+end
