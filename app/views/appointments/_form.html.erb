@@ -1,0 +1,9 @@
+<%= form_for @appointment do |f| %>
+  <%= f.label :doctor %>
+  <%= f.select :doctor_id, @docarray%><br/><br/>
+  <%= f.label :patient %>
+  <%= f.select :patient_id, @patarray %><br/><br/>
+  <%= f.label :time %>
+  <%= f.datetime_select :time %><br/><br/>
+  <%= f.submit %>
+<% end %>

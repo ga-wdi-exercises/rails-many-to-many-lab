@@ -1,0 +1,11 @@
+<h1>All Appointments<%= link_to '(+)', new_appointment_path %></h1>
+
+<ul>
+  <% @appointments.order(:time).reverse_order.each do |appointment| %>
+    <li>
+      <%= appointment.doctor.name %> <%= appointment.time %> <%= link_to "Delete", appointment, method: :delete %>
+      <%= link_to "Edit", edit_appointment_path(appointment) %>
+      <%= link_to "Show", appointment %>
+    </li>
+  <% end %>
+</ul>
