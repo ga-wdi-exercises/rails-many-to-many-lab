@@ -1,0 +1,9 @@
+<%= form_for @appointment do |f| %>
+
+<%= f.select :patient_id, Patient.all.collect { |patient| [patient.name, patient.id] }  %>
+<%= f.select :doctor_id, Doctor.all.collect { |doctor| [doctor.name, doctor.id] }  %>
+
+<%= f.time_select :time %>
+
+<%= f.submit %>
+<% end %>
