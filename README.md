@@ -20,6 +20,8 @@ You will have to write or generate migrations for this join model that reference
 
 ## State of the Existing App
 
+You will need rake DCMS (`rake db:drop db:create db:migrate db:seed`) after cloning-down your fork.
+
 The models have no active record associations, nor is there a join model. Your task is to create a join model, create migrations that link the models and add the appropriate columns to the join model, set up the ActiveRecord associations in the models (`app/models/doctors.rb` & `app/models/patients.rb`), and alter seed data to create some appointments.
 
-Then, create CRUD functionality, controller and corresponding views for this join-model. 
+Then, create CRUD functionality, controller and corresponding views for this join-model.
