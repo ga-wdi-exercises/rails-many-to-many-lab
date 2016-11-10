@@ -1,0 +1,10 @@
+<%= form_for @visit do |f| %>
+<%= f.label :doctor %>
+<%= f.select :doctor_id, @docs %><br/><br/>
+<%= f.label :patient %>
+<%= f.select :patient_id, @pats %><br/><br/>
+<%= f.label :date %>
+<%= f.datetime_select :time %><br/><br/>
+
+<%= f.submit %>
+<% end %>

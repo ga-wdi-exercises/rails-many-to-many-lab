@@ -1,0 +1,5 @@
+<h1>Visit Details</h1>
+<p>Doctor: <%= @visit.doctor.name %></p>
+<p>Patient: <%= @visit.patient.name %></p>
+<p>Time: <%= @visit.time %></p>
+<%= link_to "All Visits", visits_path %>
