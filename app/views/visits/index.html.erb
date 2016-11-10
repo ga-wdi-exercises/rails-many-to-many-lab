@@ -1,0 +1,6 @@
+<h1>All Visits <%= link_to "(+)", new_visit_path %></h1>
+<ul>
+<% @visits.order(:time).reverse_order.each do |visit| %>
+  <li><%= visit.patient.name %> - <%= visit.doctor.name %> - <%= visit.time %></li>
+<% end %>
+</ul>
