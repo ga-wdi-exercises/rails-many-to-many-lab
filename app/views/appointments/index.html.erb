@@ -1,0 +1,9 @@
+<% @doctors.each do |doc| %>
+<h2><%= doc.name%></h2>
+<p><% @appointments.each do |appt| %>
+  <% if  appt.doctor_id == doc.id %>
+<%= appt.datetime %> with <%= appt.patient.name %>
+  <% end %>
+</p>
+<% end %>
+<% end %>

@@ -1,0 +1,10 @@
+<%= form_for @appointment do |f| %>
+  <%= f.label :datetime %>
+  <%= f.text_field :datetime %>
+  <%= f.label :doctor_id %>
+  <%= f.collection_select :doctor_id, @doctors, :to_s, :to_s,
+      :include_blank => false %>
+  <%= f.label :patient_id %>
+  <%= f.text_field :patient_id %>
+  <%= f.submit %>
+<% end %>

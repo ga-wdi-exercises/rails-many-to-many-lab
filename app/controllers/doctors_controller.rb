@@ -9,6 +9,7 @@ class DoctorsController < ApplicationController
   end
 
   def show
+    @appointments = Appointment.where(doctor_id: params[:id])
   end
 
   def new
