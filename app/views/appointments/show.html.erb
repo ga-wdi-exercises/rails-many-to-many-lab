@@ -1,0 +1,6 @@
+<h1>Appointments</h1>
+<h2> <%= link_to "Appointments", appointments_path %> </h2>
+
+
+<h2> Make an Appointment </h2>
+<%= link_to "Edit #{@appointment.date.time}", edit_appointments_path(@appointment)%>
