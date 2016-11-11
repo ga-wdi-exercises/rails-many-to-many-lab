@@ -1,0 +1,12 @@
+<h3> <%= link_to "All Patients", patients_path %> <%=link_to "All Doctors", doctors_path%></h3>
+
+<h4><%= link_to "New Appointment", new_appointment_path %></h4>
+
+<% @appointments.each do |apt| %>
+  <div class="appointment">
+    <%= link_to "Edit", edit_appointment_path(apt) %>
+    <%= link_to "Cancel", appointment_path(apt), method: :delete, data: {confirm: "Cancel Appointment?"} %>
+
+    <%= "#{apt.patient.name} for Dr. #{apt.doctor.name}, @ #{apt.appointment_time}" %>
+  </div>
+<% end %>
