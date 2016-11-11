@@ -22,6 +22,15 @@ class AppointmentsController < ApplicationController
   end
 
   def edit
+    @doctors = Doctor.all
+    @patients =  Patient.all
+    @appointment = Appointment.find(params[:id])
+  end
+
+  def update
+    @appointment = Appointment.find(params[:id])
+    @appointment.update(appointment_params)
+    redirect_to appointment_path(@appointment)
   end
 
   private
