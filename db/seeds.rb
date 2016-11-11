@@ -11,7 +11,7 @@
 ##############################################
 Doctor.destroy_all
 Patient.destroy_all
-
+Appointment.destroy_all
 
 
 dr_manny = Doctor.create(name:"Manuel Manny", specialty:"Many, many things")
@@ -32,3 +32,9 @@ squanchy = Patient.create(name: "Squanchy", age: -12, gender:"squanchy_male")
 ada_lovelace = Patient.create(name: "Ada Lovelace", age: 200, gender:"female")
 
 # Add Appointments here
+
+grace_hopper.appointments.create(doctor: dr_manny, date: "October 3, 2016", time: "1:30pm", notes: "I have a headache")
+elephant_man.appointments.create(doctor: dr_gray, date: "October 17, 2016", time: "7:30am", notes: "I have an elephant face")
+zoe.appointments.create(doctor: dr_house, date: "December 12, 2016", time: "2:30pm", notes: "I have a weird issue")
+sansa.appointments.create(doctor: dr_nick, date: "December 18, 2016", time: "11:00am", notes: "Winter is coming, and I have a cold")
+storm.appointments.create(doctor: dr_gray, date: "November 30, 2016", time: "12:00pm", notes: "Nose job plastic surgery")
