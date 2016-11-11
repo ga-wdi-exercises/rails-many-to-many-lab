@@ -1,0 +1,7 @@
+<%= form_for @appointment do |f| %>
+<%= f.label :doctor %>
+<%= select_tag 'appointment[doctor_id]', options_from_collection_for_select(@doctors, 'id', 'name') %>
+<%= f.label :patient %>
+<%= select_tag 'appointment[patient_id]', options_from_collection_for_select(@patients, 'id', 'name') %>
+<%= f.submit "Save" %>
+<% end %>

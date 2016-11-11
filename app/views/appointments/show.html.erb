@@ -1,0 +1,10 @@
+<h1>Appointment</h1>
+
+<h2><%= @appointment.doctor.name %></h2>
+
+<h3>Patient</h3>
+<p><%= @appointment.patient.name %></p>
+
+<%= link_to "Back", appointments_path %>
+<%= link_to "Edit", edit_appointment_path(@appointment) %>
+<%= link_to "Delete", @appointment, method: :delete, data: {confirm:"delete appointment?"} %>
