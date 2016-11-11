@@ -1,6 +1,14 @@
-<h1>Information for <%= @patient.name %></h1>
+<h1>Information for <%= @patient.name %><br/><%= link_to "(Add Appointment +)", new_appointment_path%></h1>
 <h2> <%= link_to "All Patients", patients_path %> </h2>
-
+<% @appointments.each do |appointment|%>
+<p><strong>Doctor:</strong> <%=appointment.doctor.name%></p>
+<p><strong>Date:</strong> <%=appointment.date%></p>
+<p><strong>Time:</strong> <%=appointment.time%></p>
+<p><strong>Notes:</strong> <%=appointment.notes%></p>
+<%= link_to "Edit Appointment", edit_appointment_path(appointment)%>
+<%= link_to "Delete", appointment, method: :delete, class: "delete" %>
+<hr>
+<%end%>
 <div class="">
   Age: <%= @patient.age %>,&nbsp;&nbsp;
   Gender: <%= @patient.gender  %>

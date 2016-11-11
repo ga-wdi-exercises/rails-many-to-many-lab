@@ -9,6 +9,7 @@ class DoctorsController < ApplicationController
   end
 
   def show
+    @appointments = @doctor.appointments.all
   end
 
   def new
