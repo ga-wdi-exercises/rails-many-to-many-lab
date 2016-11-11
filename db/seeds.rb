@@ -32,3 +32,8 @@ squanchy = Patient.create(name: "Squanchy", age: -12, gender:"squanchy_male")
 ada_lovelace = Patient.create(name: "Ada Lovelace", age: 200, gender:"female")
 
 # Add Appointments here
+
+appointment0 = Appointment.create!(doctor_id: dr_nick.id, patient_id: squanchy.id, appointments_time: Time.new)
+appointment1 = Appointment.create!(doctor_id: dr_manny.id, patient_id: sea_biscuit.id, appointments_time: Time.new)
+appointment2 = Appointment.create!(doctor_id: dr_gray.id, patient_id: molly_millions.id, appointments_time: Time.new)
+appointment3 = Appointment.create!(doctor_id: dr_gray.id, patient_id: grace_hopper.id, appointments_time: Time.new)
