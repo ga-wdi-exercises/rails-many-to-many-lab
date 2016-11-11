@@ -1,6 +1,5 @@
-<h1> Showing Patients </h1>
-<h2> <%= link_to "All Doctors", doctors_path %> </h2>
-<h3> <%= link_to "Admit New Patient", new_patient_path %> </h3>
+<h2> Showing Patients </h2>
+<h3> <%= link_to "All Doctors", doctors_path %> | <%= link_to "All Appointments", appointments_path %> </h3>
 
 
 <% @patients.each do |patient| %>
@@ -9,3 +8,5 @@
   <%= link_to patient.name, patient_path(patient) %>
 </div>
 <% end  %>
+
+<h3> <%= link_to "Admit New Patient", new_patient_path %> </h3>

@@ -11,7 +11,7 @@
 ##############################################
 Doctor.destroy_all
 Patient.destroy_all
-
+Appointment.destroy_all
 
 
 dr_manny = Doctor.create(name:"Manuel Manny", specialty:"Many, many things")
@@ -32,3 +32,8 @@ squanchy = Patient.create(name: "Squanchy", age: -12, gender:"squanchy_male")
 ada_lovelace = Patient.create(name: "Ada Lovelace", age: 200, gender:"female")
 
 # Add Appointments here
+
+
+appointment1 = Appointment.create(patient_id: m_burns.id, doctor_id: dr_manny.id, appointment_time: Time.now)
+appointment2 = Appointment.create(patient_id: grace_hopper.id, doctor_id: dr_nick.id, appointment_time: Time.now)
+appointment3 = Appointment.create(patient_id: elephant_man.id, doctor_id: dr_gray.id, appointment_date: nil, appointment_time: nil)
