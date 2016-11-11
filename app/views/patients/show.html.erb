@@ -9,3 +9,10 @@
 <%= link_to "Edit #{@patient.name}", edit_patient_path(@patient) %>
 <%= link_to "Remove #{@patient.name}", patient_path(@patient),
   method: :delete, data: {confirm: "Remove from practice?"}  %>
+
+  <% @appointments.each do |appt| %>
+  <div>
+  <%= appt.datetime %> with 
+   Dr. <%= appt.doctor.name %>
+ </div>
+  <% end %>
