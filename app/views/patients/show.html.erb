@@ -3,8 +3,18 @@
 
 <div class="">
   Age: <%= @patient.age %>,&nbsp;&nbsp;
-  Gender: <%= @patient.gender  %>
+  Gender: <%= @patient.gender  %>,&nbsp;&nbsp;
+  <%= link_to "View Upcoming Appointments: ", '/patients/appointments/'%>
+
 </div>
+
+<h2>Appointments:</h2>
+<% @patient.appointments.each do |appointment| %>
+  <p> <%= link_to appointment.appt_time, appointment_path(appointment) %></p>
+  <p> Dr. <%= appointment.doctor.name  %></p>
+  <p>At: <%= appointment.appt_time %></p>
+
+  <% end %>
 
 <%= link_to "Edit #{@patient.name}", edit_patient_path(@patient) %>
 <%= link_to "Remove #{@patient.name}", patient_path(@patient),
