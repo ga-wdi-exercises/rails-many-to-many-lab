@@ -9,6 +9,7 @@
 ##############################################
 # After creating a join model and adding in your assocations, add instances of your join model here in the seeds.rb file,then modify seed data entries for doctors and patients to be associated with instances of your join model (visits, appointments, check_ups, or whatever you've named your join model).
 ##############################################
+Appointment.destroy_all
 Doctor.destroy_all
 Patient.destroy_all
 
@@ -32,3 +33,6 @@ squanchy = Patient.create(name: "Squanchy", age: -12, gender:"squanchy_male")
 ada_lovelace = Patient.create(name: "Ada Lovelace", age: 200, gender:"female")
 
 # Add Appointments here
+20.times do
+Appointment.create(doctor: Doctor.all.sample, patient: Patient.all.sample, time: "2012-#{rand(1..12)}-#{rand(1..30)} #{rand(1..23)}:#{rand(1..59)}:#{rand(1..59)}")
+end
